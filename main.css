@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Colors Start */
+
+:root {
+
+    /* Primary Colors */
+    --v-dark-desat-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /* Background Gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    
+    /* Neutral Colors  */
+    --v-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background: linear-gradient(var(--soft-blue), var(--soft-violet));
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+main {
+    background: white;
+    width: 900px;
+    border-radius: 25px;
+}
+
+.card {
+    display: flex;
+}
+
+.card__header {
+    font-size: 2em;
+    padding: 25px 0 10px 0;
+}
+
+.card__question {
+    cursor: pointer;
+    
+}
+
+/* How I added the down arrow near the question */
+.card__question::after {
+    content: url(images/icon-arrow-down.svg);
+    float: right;
+    margin-left: 65px;
+}
+
+/* Adding display:none to hide the answer until clicked */
+.card__answer {
+    display: none; 
+}
+
+
+#pika {
+    font-size: 2em;
+}
